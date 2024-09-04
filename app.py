@@ -1,19 +1,19 @@
 import os
 from flask import Flask, jsonify, request
-from offline_caption_generator import generate_caption_ar
+from caption_generator import generate_caption_ar
 import requests
 from PIL import Image
 from io import BytesIO
 from flask_cors import CORS
 
 '''
-CORS(app, origins=['https://example.com'],
+CORS(app, origins=['https://wasef.netlify.app'],
      methods=['GET', 'POST', 'PUT', 'DELETE'],
      headers=['Content-Type', 'Authorization'])
 '''
 
 app = Flask(__name__)
-CORS(app, resources={r"/predict*": {"origins": "*", 
+CORS(app, resources={r"/predict*": {"origins":['https://wasef.netlify.app'], 
                                     "methods": ["GET", "POST", "OPTIONS"], 
                                     "headers": ["Content-Type", "Accept"]}})
 
