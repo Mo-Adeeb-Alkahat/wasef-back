@@ -4,4 +4,3 @@ numpy==2.1.0
 Pillow==10.4.0
 Requests==2.32.3
 tensorflow==2.17.0
-pickle
